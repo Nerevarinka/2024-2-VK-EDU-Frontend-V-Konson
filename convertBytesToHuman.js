@@ -18,5 +18,29 @@
  */
 
 export default function convertBytesToHuman(bytes) {
-  // your solution goes here
+  if (typeof (bytes) != "number" || isNaN(bytes) || bytes < 0) {
+    return false;
+  }
+
+  const bytesInKB = 1024;
+
+  let fileSizeKB = bytes / bytesInKB;
+
+  if (fileSizeKB < 1) {
+    return `${+bytes.toFixed(2)} B`;
+  }
+
+  let fileSizeMB = fileSizeKB / bytesInKB;
+
+  if (fileSizeMB < 1) {
+    return `${+fileSizeKB.toFixed(2)} KB`;
+  }
+
+  let fileSizeGB = fileSizeMB / bytesInKB;
+
+  if (fileSizeGB < 1) {
+    return `${+fileSizeMB.toFixed(2)} MB`;
+  }
+
+  return `${+fileSizeGB.toFixed(2)} GB`;
 }
