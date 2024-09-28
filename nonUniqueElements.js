@@ -24,7 +24,18 @@ nonUniqueElements([5, 5, 5, 5, 5]) == [5, 5, 5, 5, 5]
 nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
  */
 
-export default function nonUniqueElements(data) {
-  // your solution goes here
-  return data
+export function nonUniqueElements(data) {
+  const numbersArray = [];
+
+  for (const number of data) {
+    if (numbersArray.includes(number)) {
+      numbersArray.push(number);
+      continue;
+    }
+    if (data.filter(x => x == number).length > 1) {
+      numbersArray.push(number);
+    }
+  }
+
+  return numbersArray;
 }
