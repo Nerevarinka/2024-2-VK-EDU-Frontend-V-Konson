@@ -23,23 +23,14 @@ export function convertBytesToHuman(bytes) {
 
   const bytesInKB = 1024;
 
-  let fileSizeKB = bytes / bytesInKB;
+  const units = ["B", "KB", "MB", "GB"];
 
-  if (fileSizeKB < 1) {
-    return `${+bytes.toFixed(2)} B`;
+  for (let i = 0; i < units.length; i++) {
+    if (bytes < bytesInKB) {
+      return `${+bytes.toFixed(2)} ${units[i]}`;
+    }
+
+    bytes /= bytesInKB;
   }
-
-  let fileSizeMB = fileSizeKB / bytesInKB;
-
-  if (fileSizeMB < 1) {
-    return `${+fileSizeKB.toFixed(2)} KB`;
-  }
-
-  let fileSizeGB = fileSizeMB / bytesInKB;
-
-  if (fileSizeGB < 1) {
-    return `${+fileSizeMB.toFixed(2)} MB`;
-  }
-
-  return `${+fileSizeGB.toFixed(2)} GB`;
 }
+
