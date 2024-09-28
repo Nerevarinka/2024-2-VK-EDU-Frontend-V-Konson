@@ -4,9 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
     "test": "jest"
   },
   "jest": {
@@ -14,9 +11,9 @@
     "^.+\\.jsx?$": "babel-jest"
     }
   },
-"babel": {
-"presets": ["@babel/preset-env"]
-},
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {

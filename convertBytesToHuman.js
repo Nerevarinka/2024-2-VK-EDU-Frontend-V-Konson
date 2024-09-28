@@ -16,8 +16,7 @@
  * В случае передачи неподходящего аргумента,
  * функция должна вернуть false.
  */
-
-export default function convertBytesToHuman(bytes) {
+export function convertBytesToHuman(bytes) {
   if (typeof (bytes) != "number" || isNaN(bytes) || bytes < 0) {
     return false;
   }
