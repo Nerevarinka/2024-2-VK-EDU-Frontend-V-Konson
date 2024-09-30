@@ -25,13 +25,17 @@ nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
  */
 
 export function nonUniqueElements(data) {
-  const numbersArray = [];
-
-  if (typeof (data) != []) {
+  if (!Array.isArray(data)) {
     return false;
   }
 
+  const numbersArray = [];
+
   for (const number of data) {
+    if (!Number.isFinite(number) || !number) {
+      return false;
+    }
+
     if (numbersArray.includes(number)) {
       numbersArray.push(number);
       continue;

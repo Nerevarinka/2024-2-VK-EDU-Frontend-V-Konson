@@ -9,6 +9,9 @@ describe("Тестирование функции nonUniqueElements", () => {
   });
 
   test('Возвращает false для некорректных типов', () => {
-    expect(nonUniqueElements([1, 2, 3, 1, 3])).toEqual([1, 3, 1, 3]);
+    expect(nonUniqueElements("Text")).toEqual(false);
+    expect(nonUniqueElements(null)).toEqual(false);
+    expect(nonUniqueElements(undefined)).toEqual(false);
+    expect(nonUniqueElements({})).toEqual(false);
   });
 });

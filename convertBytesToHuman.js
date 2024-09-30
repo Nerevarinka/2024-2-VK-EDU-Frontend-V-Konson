@@ -17,7 +17,7 @@
  * функция должна вернуть false.
  */
 export function convertBytesToHuman(bytes) {
-  if (Number.isFinite(bytes) || bytes < 0) {
+  if (!Number.isFinite(bytes) || bytes < 0) {
     return false;
   }
 
