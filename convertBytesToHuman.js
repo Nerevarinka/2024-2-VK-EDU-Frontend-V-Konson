@@ -17,20 +17,20 @@
  * функция должна вернуть false.
  */
 export function convertBytesToHuman(bytes) {
-  if (typeof (bytes) != "number" || isNaN(bytes) || bytes < 0) {
+  if (Number.isFinite(bytes) || bytes < 0) {
     return false;
   }
 
-  const bytesInKB = 1024;
+  const BYTES_IN_KB = 1024;
 
   const units = ["B", "KB", "MB", "GB"];
 
   for (let i = 0; i < units.length; i++) {
-    if (bytes < bytesInKB) {
+    if (bytes < BYTES_IN_KB) {
       return `${+bytes.toFixed(2)} ${units[i]}`;
     }
 
-    bytes /= bytesInKB;
+    bytes /= BYTES_IN_KB;
   }
 }
 

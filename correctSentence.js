@@ -18,7 +18,7 @@ correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
 export function correctSentence(text) {
-  if (typeof (text) != "string" || text.length < 1) {
+  if (typeof (text) !== "string" || text.length < 1) {
     return false;
   }
 
