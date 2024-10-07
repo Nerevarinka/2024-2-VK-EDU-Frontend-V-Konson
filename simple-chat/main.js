@@ -166,4 +166,5 @@ function pushMessageIfPossible() {
 
 document.getElementById("send-btn").addEventListener("click", pushMessageIfPossible);
 messageInput.addEventListener("keyup", onTextKeyUp);
+
 init();
