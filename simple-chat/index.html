@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Большая клетка</title>
+  </head>
+  <body>
+    <div class="chat">
+      <div class="header">
+        <span class="material-icons arrow-back is-not-allowed">arrow_back_ios</span>
+        <div class="chat-overview">
+          <img class="avatar" src="./img/IMG_9346.JPG" alt="Пингвинчик" />
+          <div class="chat-info">
+            <div class="chat-name">Чат "Пингвинчик и КО"</div>
+            <div class="chat-users-count">Участников: 0</div>
+          </div>
+        </div>
+        <div class="options-buttons">
+          <span class="material-icons is-not-allowed">search</span>
+          <span class="material-icons is-not-allowed">more_vert</span>
+        </div>
+      </div>
+      <div class="messages" id="messagesContainer">
+      </div>
+      <div class="message-input-container">
+        <input id="message-input" class="message-input" type="text" placeholder="Введите сообщение" />
+        <div class="input-buttons">
+          <span id="send-btn" class="material-icons message-input-buttons is-clickable">send</span>
+          <span class="material-icons message-input-buttons is-not-allowed">attach_file</span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
